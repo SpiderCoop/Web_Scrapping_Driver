@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-def driver_configuration(download_save_path:str = None, headless:bool = True):
+def driver_configuration(download_save_path:str = None, headless:bool = True, detach:bool = False):
     """
     Selenium's driver configuration with automatic file download options and headless mode
 
@@ -58,6 +58,8 @@ def driver_configuration(download_save_path:str = None, headless:bool = True):
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--remote-debugging-port=0")
     chrome_options.add_argument("--log-level=3")
+
+    chrome_options.add_experimental_option("detach", detach)
 
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager().install()),
