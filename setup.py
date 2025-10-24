@@ -16,7 +16,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "selenim",
+        "selenium",
         "webdriver-manager",
     ],
     python_requires=">=3.6",  # Versión mínima de Python compatible
