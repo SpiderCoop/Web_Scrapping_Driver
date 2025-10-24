@@ -1,1 +1,1 @@
-from driver_configuration import driver_configuration
+from driver_configuration.driver_configuration import driver_configuration
