@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="driver_configuration",  # Nombre del paquete (debe coincidir con la carpeta del módulo)
-    version="0.1.0",  # Versión inicial del paquete
+    version="0.1.1",  # Versión inicial del paquete
     author="David Jiménez Cooper",
     author_email="david.jimenez.cooper@gmail.com",
     description="Un paquete para configurar de manera rapida y sencilla el driver de selenium",
