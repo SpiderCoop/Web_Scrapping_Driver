@@ -31,8 +31,6 @@ def driver_configuration(download_save_path:str = None, headless:bool = True, de
         Instance of the configured Chrome driver.
 
     """
-    if download_save_path and not os.path.exists(download_save_path):
-        os.makedirs(download_save_path)
 
     chrome_options = Options()
 
@@ -40,6 +38,8 @@ def driver_configuration(download_save_path:str = None, headless:bool = True, de
         chrome_options.add_argument("--headless=new")
 
     if download_save_path:
+        if not os.path.isabs(download_save_path):
+            download_save_path = os.path.abspath(download_save_path)
         if not os.path.exists(download_save_path):
             os.makedirs(download_save_path)
 
